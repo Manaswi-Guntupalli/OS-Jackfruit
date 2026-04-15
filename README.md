@@ -96,35 +96,45 @@ dmesg | grep container_monitor | tail -5
 
 ---
 
-## 3. Demo Screenshots
+## 3. Demo with Screenshots
 
-**Part 1 — Screenshots 1 and 2**
+### 1. Multi-container supervision
 ![ss1](screenshots/ss1.png)
+Caption: Two or more containers running under one supervisor process.
 
 ![ss2](screenshots/ss2.png)
+Caption: Same supervisor process concurrently managing multiple active containers.
 
-**Part 2 — Screenshot 3**
+### 2. Metadata tracking
 ![ss3](screenshots/ss3.png)
+Caption: `ps` output showing tracked container metadata.
 
-**Part 3 — Screenshot 4**
+### 3. Bounded-buffer logging
 ![ss4](screenshots/ss4.jpg)
+Caption: Log output captured through the logging pipeline with producer/consumer activity.
 
-**Part 4 — Screenshot 10**
+### 4. CLI and IPC
 ![ss10](screenshots/ss10.png)
+Caption: CLI command issued and supervisor response received through the control IPC mechanism.
 
-**Part 5 — Screenshot 5**
+### 5. Soft-limit warning
 ![ss5](screenshots/ss5.png)
+Caption: `dmesg` output showing a soft-limit warning event for a container.
 
-**Part 6 — Screenshots 6 and 7**
+### 6. Hard-limit enforcement
 ![ss6](screenshots/ss6.png)
+Caption: Log output showing hard-limit violation handling.
 
 ![ss7](screenshots/ss7.png)
+Caption: Supervisor metadata/state reflecting container termination after hard-limit exceed.
 
-**Part 7 — Screenshot 8**
+### 7. Scheduling experiment
 ![ss8](screenshots/ss8.jpg)
+Caption: Scheduling experiment output with observable differences between configurations.
 
-**Part 8 — Screenshot 9**
+### 8. Clean teardown
 ![ss9](screenshots/ss9.jpg)
+Caption: Shutdown evidence showing containers reaped, threads exited, and no zombie processes.
 
 ## 4. Engineering Analysis
 
