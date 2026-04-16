@@ -97,6 +97,7 @@ typedef struct {
     char message[CONTROL_MESSAGE_LEN];
 } control_response_t;
 
+
 typedef struct {
     char id[CONTAINER_ID_LEN];
     char rootfs[PATH_MAX];
